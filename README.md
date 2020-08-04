@@ -81,9 +81,10 @@ Objects color and normal vectors can be altered depending on the hitpoint positi
 </p>
 
 <p align="center">
-  <b>Normal perturbation</b>
+  <b>Normal perturbation (water effect)</b>
 </p>
 
 <p align="center">
-  <img src="https://github.com/wael-mos/RT/blob/master/screens/water.png" width="640"/>
+  <img src="https://github.com/wael-mos/RT/blob/master/screens/water.png" width="500"/>
+  <img src="https://github.com/wael-mos/RT/blob/master/screens/water2.png" width="500"/>
 </p>
