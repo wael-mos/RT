@@ -71,7 +71,7 @@ They can also have a reflection index.
   <img src="https://github.com/wael-mos/RT/blob/master/screens/infinity.png" width="500"/>
 </p>
 
-All objects color and normal vectors can be altered depending on the hitpoint position.
+Objects color and normal vectors can be altered depending on the hitpoint position.
 <p align="center">
   <b>Objects color</b>
 </p>
