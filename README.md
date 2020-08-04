@@ -27,7 +27,7 @@ When we execute the RayTracer without files, we will see this. You can still cho
   <img src="https://github.com/wael-mos/RT/blob/master/screens/window.png" width="640"/>
 </p>
 
-We can render different shapes (they are all available on the left except the Goursat).
+We can render different shapes (they are all available in the menu on the left except the Goursat).
 
 <p align="center">
   <img src="https://github.com/wael-mos/RT/blob/master/screens/objects.png" width="640"/>
@@ -39,4 +39,14 @@ We can render different shapes (they are all available on the left except the Go
 
 <p align="center">
   <img src="https://github.com/wael-mos/RT/blob/master/screens/goursat.png" width="640"/>
+</p>
+
+The lights can have any color and they will interact properly with the world and with each other.
+
+<p align="center">
+  <img src="https://github.com/wael-mos/RT/blob/master/screens/multi_lights.png" width="640"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/wael-mos/RT/blob/master/screens/fancy.png" width="640"/>
 </p>
