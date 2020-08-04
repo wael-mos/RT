@@ -88,3 +88,10 @@ Objects color and normal vectors can be altered depending on the hitpoint positi
   <img src="https://github.com/wael-mos/RT/blob/master/screens/water.png" width="500"/>
   <img src="https://github.com/wael-mos/RT/blob/master/screens/water2.png" width="500"/>
 </p>
+
+Perlin texture can be applied to objects.
+
+<p align="center">
+  <img src="https://github.com/wael-mos/RT/blob/master/screens/demo_perlin.png" width="640"/>
+</p>
+Perlin noise is a procedural texture used as a visual effect to increase the apparent realism in image synthesis.
