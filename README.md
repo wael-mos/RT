@@ -70,3 +70,20 @@ They can also have a reflection index.
   <img src="https://github.com/wael-mos/RT/blob/master/screens/inf_sphere.png" width="500"/>
   <img src="https://github.com/wael-mos/RT/blob/master/screens/infinity.png" width="500"/>
 </p>
+
+Objects color and normal vectors can be altered depending on the hitpoint position.
+<p align="center">
+  <b>Objects color</b>
+</p>
+
+<p align="center">
+  <img src="https://github.com/wael-mos/RT/blob/master/screens/patterns.png" width="640"/>
+</p>
+
+<p align="center">
+  <b>Normal perturbation</b>
+</p>
+
+<p align="center">
+  <img src="https://github.com/wael-mos/RT/blob/master/screens/water.png" width="640"/>
+</p>
