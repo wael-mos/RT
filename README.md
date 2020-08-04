@@ -1,7 +1,7 @@
 # RT
 
 RayTracer project from 42.
-
+<br />
 ### Install
 
 ```bash
@@ -13,12 +13,12 @@ make
 ./RT [file]
 ```
 Files are in scenes folder.
-
+<br />
 ### Hotkeys
 
 "w" "a" "s" "d" to move the camera, "space" to move up, "z" to go down
 arrow keys to change the looking direction of the camera
-
+<br />
 ### Features
 
 When we execute the RayTracer without files, we will see this. You can still choose a file and click on the folder to open it. Or you can create it !
@@ -32,7 +32,7 @@ We can render different shapes (they are all available in the menu on the left e
 <p align="center">
   <img src="https://github.com/wael-mos/RT/blob/master/screens/objects.png" width="640"/>
 </p>
-<br />
+
 We can also render more complex shapes with 4 possible intersection points.
 <p align="center">
   <b>Goursat</b>
