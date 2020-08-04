@@ -1,0 +1,68 @@
+.moregreybackground {
+	background-color: #1f2022;
+}
+
+.txt {
+	color: #bdbdbd;
+	font-size: 15px;
+}
+
+.coords {
+	color: #bdbdbd;
+	font-size: 18px;
+}
+
+.greybackgroud {
+	background-color: #3c3c3c;
+	border: none;
+}
+
+.button {
+	background-image: none;
+	background-color: #3c3c3c;
+}
+
+.button:hover {
+	background-image: none;
+	background-color: #1f2022;
+}
+
+.mode {
+	border: 2px solid orange;
+}
+
+.separator {
+	border-radius: 0%;
+	border-right: 1px solid #616161;
+}
+
+.rborder {
+	padding-right: 12px;
+	border-radius: 0%;
+	border-right: 1px solid #616161;
+}
+
+.cat {
+	font-weight: 600;
+	text-decoration: underline #b6b6b6;
+}
+
+.midcat {
+	font-weight: 400;
+	color: #bdbdbd;
+	font-size: 17px;
+}
+
+.expander {
+    color: #616161;
+    background-color: #1f2022;
+}
+
+.inside {
+	color: #616161;
+	background-color: #0c0c0d;
+}
+
+expander arrow {
+	color: white;
+}

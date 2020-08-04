@@ -1,0 +1,182 @@
+#define OPENCLTEST
+#define MAX_OBJECTS 100
+#define MAX_LIGHTS 10
+#ifndef M_PI
+# define M_PI	3.14159265359f
+#endif
+
+typedef union	s_col
+{
+	unsigned int	i;
+	unsigned char	c[4];
+}				t_col;
+
+typedef struct	s_ray
+{
+	float3		ori;
+	float3		dir;
+}				t_ray;
+
+typedef struct	s_cam
+{
+	float3		pos;
+	float3		rot;
+	float		fov;
+}				t_cam;
+
+typedef struct	s_light
+{
+	float3		pos;
+	float3		col;
+	char		*id;
+}				t_light;
+
+typedef enum	e_type
+{
+	PLANE = 0,
+	SPHERE,
+	CYLINDER,
+	CONE,
+	TORE,
+	DISK,
+	PARA,
+	CUBE,
+}				t_type;
+
+/*
+**	Mode : 1=Sea 2=Lake
+*/
+typedef struct	s_water
+{
+	float		frequency;
+	float		ampli;
+	int			mode;
+}				t_water;
+
+/*
+**	Type : 1=Wood 2=Marble 3=Cloud
+*/
+typedef struct	s_perlin
+{
+	int			type;
+	int			octav;
+	float		turbpow;
+	float		scaler;
+	float		opacity;
+	int			ringnb; //wood
+	int			linex; //marble
+	int			liney; //marble
+}				t_perlin;
+
+typedef struct	s_obj
+{
+	t_type				type;
+	float3				pos;
+	float				rad;
+	float3				rot;
+	float3				axe;
+	float3				col;
+	float				ior;
+	float				refl;
+	float				refr;
+	t_water				water;
+	t_perlin			perlin;
+	int					shine;
+	int					inf;
+	int					height;
+	int 		checkh;
+	int 		checkw;
+	float3 checkcol;
+	char				*id;
+}				t_obj;
+
+typedef struct	s_scene
+{
+	int			win_x;
+	int 		win_y;
+	t_cam		cam;
+	float		ambient;
+	int			effect;
+	float		saturation;
+	float		gamma;
+	int			selected_obj;
+	int			selected_light;
+	int			num_light;
+	int			num_obj;
+	t_light		lights[MAX_LIGHTS];
+	t_obj		objs[MAX_OBJECTS];
+	float3  bg;
+	int			bouncenb;
+	float3  fogcol;
+	float		fogdist;
+}				t_scene;
+
+float3			cast_ray(__global t_scene *scene, t_ray *ray, int depth);
+
+//int				equation_solver(float a, float b, float c, float *t);
+int				cylinder_intersect(t_ray *r, __global t_obj *s, float *t);
+int				sphere_intersect(t_ray *r, __global t_obj *s, float *t);
+int				plane_intersect(t_ray *r, __global t_obj *s, float *t);
+int				cone_intersect(t_ray *r, __global t_obj *s, float *t);
+int				disk_intersect(t_ray *r, __global t_obj *s, float *t);
+int 	disk_shadow(t_ray *r, __global t_obj *s, float *t);
+int			plane_shadow(t_ray *r, __global t_obj *s, float *t);
+int			limplane_intersect(t_ray *r, __global t_obj *s, float *t);
+int				para_intersect(t_ray *r, __global t_obj *s, float *t);
+int				paraboloid_intersect(t_ray *r, __global t_obj *s, float *t);
+
+float3			get_phit_normal(t_ray *r, float3 p_hit, __global t_obj *obj, float t);
+__global t_obj	*get_shadow_intersect(__global t_scene *scene, t_ray *ray, float *t);
+int				limplane_shadow(t_ray *r, __global t_obj *s, float *t);
+__global t_obj	*get_obj_intersect(__global t_scene *scene, t_ray *ray, float *t);
+
+float3			cloud_perlin(__global t_obj *obj, float3 p_hit);
+float3			marble_perlin(__global t_obj *obj, __global t_scene *env, float3 p_hit);
+float3			wood_perlin(__global t_obj *obj, __global t_scene *env, float3 p_hit);
+float3			perlin_gen_texture(__global t_obj *obj, __global t_scene *env, float3 p_hit);
+
+float3			normal_perturb_water(float3 pos, float frequency, float ampli, float lake);
+
+float			hash(float p);
+float			noise(float3 x);
+float			fbm(float3 pos, int octav);
+
+float			fractf(float a);
+float3			fract_vec(float3 a);
+float3			floor_vec(float3 a);
+int				float3_to_int(float3 col);
+float			ft_clamp(float x, float min, float max);
+float3			normalize_col(float3 col);
+
+float3			rotate_x(float3 v, float theta);
+float3			rotate_y(float3 v, float theta);
+float3			rotate_z(float3 v, float theta);
+float3			rotate_full(float3 ori, float3 rot);
+
+float3			reflect(float3 i, float3 normal);
+float3			refract(float3 i, float3 normal, float ior);
+float			fresnel(float3 i, float3 n, float ior);
+float			shine(t_light *light, t_ray n_hit, t_ray *ray, int size);
+float3			lights(__global t_scene *scene, float3 mat, t_ray n_hit, t_ray *ray, __global t_obj *curr_obj);
+float3		lights2(__global t_scene *scene, float3 mat, t_ray n_hit, t_ray *ray, __global t_obj *curr_obj);
+
+float			cel_shading(float ambient, float3 dir, float3 ndir);
+float3 gamma_correction(float3 col, float gamma);
+float3 desaturate(float3 col, float amount);
+float3 invert(float3 col);
+float3 sepiarize(float3 col);
+float3 blackwhite(float3 col);
+float3	check_effect(__global t_scene *scene, float3 col);
+int			finite_solver(float a, float b, float c, float *t, __global t_obj *s, t_ray *r);
+int			infinite_solver(float a, float b, float c, float *t);
+
+void  	sphere_mapping(float *u, float *v, float3 *p_hit, float rad);
+void 		cylinder_mapping(float *u, float *v, float3 *p_hit, __global t_obj *obj);
+float3 		plane_checker(float3 *p_hit, __global t_obj *obj);
+float3	get_pattern_col(__global t_obj *obj, float u, float v);
+float3  get_checkerboard_color(__global t_obj *obj, t_ray *p_hit);
+int			reverse_parity(int parity);
+int 				ft_solve_4(double t[5], double4 *res);
+double3 ft_solve_3(double a, double b, double c, double d);
+int			tore_intersect(t_ray *r, __global t_obj *s, float *t);
+int			cube_intersect(t_ray *r, __global t_obj *s, float *t);

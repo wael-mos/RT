@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scene>
+	<windows>
+		<size x="1080" y="720"/>
+	</windows>
+
+	<!--  -->
+
+	<camera fov="60">
+		<pos x="-440" y="-500" z="1000"/>
+		<rot x="0" y="0" z="0"/>
+	</camera>
+
+	<!--  -->
+
+	<lights ambient="30">
+		<light>
+		    <pos x="0" y="699" z="500"/>
+			<col r="100" g="100" b="100"/>
+		</light>
+	</lights>
+
+	<!--  -->
+
+	<objects>
+		<plane ior="133" shine="40">
+			<water freq="6" ampli="100" mode="1"/>
+			<pos x="0" y="-700" z="0"/>
+			<rot x="0" y="0" z="0"/>
+			<col r="0" g="40" b="70"/>
+		</plane>
+
+		<plane shine="40">
+			<perlin>
+					<cloud scaler="8" octav="30" opacity="130"/>
+			</perlin>
+			<pos x="0" y="800" z="0"/>
+			<rot x="180" y="0" z="0"/>
+			<col r="0" g="30" b="70"/>
+		</plane>
+
+		<sphere radius="100" shine="40">
+			<pos x="-800" y="-700" z="0"/>
+			<rot x="0" y="0" z="0"/>
+			<col r="0" g="0" b="0"/>
+		</sphere>
+
+		<sphere radius="100" reflect="100">
+			<pos x="-600" y="-700" z="0"/>
+			<rot x="0" y="0" z="0"/>
+			<col r="0" g="0" b="0"/>
+		</sphere>
+
+		<sphere radius="100" refract="95" ior="100">
+			<pos x="-400" y="-700" z="0"/>
+			<rot x="0" y="0" z="0"/>
+			<col r="100" g="100" b="100"/>
+		</sphere>
+
+		<cylindre radius="100">
+			<perlin>
+				<wood turbpow="100" ringnb="20" scaler="12" octav="20" opacity="50"/>
+			</perlin>
+			<pos x="-1000" y="0" z="0"/>
+			<rot x="0" y="0" z="0"/>
+			<col r="75" g="60" b="40"/>
+		</cylindre>
+
+		<cylindre radius="100">
+			<!-- <perlin>
+				<marble turbpow="1000" linex="2" liney="2" scaler="12" octav="8" opacity="50"/>
+			</perlin> -->
+			<perlin>
+				<marble turbpow="700" linex="2" liney="0" scaler="12" octav="8" opacity="100"/>
+			</perlin>
+			<pos x="-200" y="0" z="0"/>
+			<rot x="0" y="0" z="0"/>
+			<col r="100" g="100" b="100"/>
+		</cylindre>
+
+		
+	</objects>
+</scene>
