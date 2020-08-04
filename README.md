@@ -33,7 +33,9 @@ We can render different shapes (they are all available on the left except the Go
   <img src="https://github.com/wael-mos/RT/blob/master/screens/objects.png" width="640"/>
 </p>
 
+<p align="center">
 #### Goursat
+</p>
 
 <p align="center">
   <img src="https://github.com/wael-mos/RT/blob/master/screens/goursat.png" width="640"/>
