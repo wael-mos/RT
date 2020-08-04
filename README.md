@@ -34,7 +34,7 @@ We can render different shapes (they are all available on the left except the Go
 </p>
 
 <p align="center">
-#### Goursat
+  <b>Goursat</b>
 </p>
 
 <p align="center">
