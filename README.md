@@ -50,3 +50,10 @@ The lights can have any color and they will interact properly with the world and
 <p align="center">
   <img src="https://github.com/wael-mos/RT/blob/master/screens/fancy.png" width="640"/>
 </p>
+
+Objects can have a transparency and a refraction index.
+
+<p align="center">
+  <img src="https://github.com/wael-mos/RT/blob/master/screens/tube.png" width="320"/>
+  <img src="https://github.com/wael-mos/RT/blob/master/screens/refract.png" width="320"/>
+</p>
