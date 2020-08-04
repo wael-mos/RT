@@ -27,7 +27,14 @@ When we execute the RayTracer without files, we will see this. You can still cho
   <img src="https://github.com/wael-mos/RT/blob/master/screens/window.png" width="640"/>
 </p>
 
-We can render different shapes (available on the left).
+We can render different shapes (they are all available on the left except the Goursat).
+
 <p align="center">
-  <img src="https://github.com/wael-mos/RT/blob/master/screens/objetcs.png" width="640"/>
+  <img src="https://github.com/wael-mos/RT/blob/master/screens/objects.png" width="640"/>
+</p>
+
+#### Goursat
+
+<p align="center">
+  <img src="https://github.com/wael-mos/RT/blob/master/screens/goursat.png" width="640"/>
 </p>
