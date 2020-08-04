@@ -16,11 +16,18 @@ Files are in scenes folder.
 
 ### Hotkeys
 
-"w""a""s""d" to move the camera like a fps game, "space" to move up, "z" to go down
+"w" "a" "s" "d" to move the camera, "space" to move up, "z" to go down
 arrow keys to change the looking direction of the camera
 
 ### Features
 
+When we execute the RayTracer without files, we will see this. You can still choose a file and click on the folder to open it. Or you can create it !
+
 <p align="center">
   <img src="https://github.com/wael-mos/RT/blob/master/screens/window.png" width="640"/>
+</p>
+
+We can render different shapes (available on the left).
+<p align="center">
+  <img src="https://github.com/wael-mos/RT/blob/master/screens/objetcs.png" width="640"/>
 </p>
