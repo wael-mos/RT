@@ -57,7 +57,7 @@ The lights can have any color and they will interact properly with the world and
   <img src="https://github.com/wael-mos/RT/blob/master/screens/fancy.png" width="500"/>
 </p>
 
-Objects can have a transparency and a refraction index.
+All objects can have a transparency and a refraction index.
 
 <p align="center">
   <img src="https://github.com/wael-mos/RT/blob/master/screens/tube.png" width="500"/>
@@ -71,7 +71,7 @@ They can also have a reflection index.
   <img src="https://github.com/wael-mos/RT/blob/master/screens/infinity.png" width="500"/>
 </p>
 
-Objects color and normal vectors can be altered depending on the hitpoint position.
+All objects color and normal vectors can be altered depending on the hitpoint position.
 <p align="center">
   <b>Objects color</b>
 </p>
@@ -89,7 +89,7 @@ Objects color and normal vectors can be altered depending on the hitpoint positi
   <img src="https://github.com/wael-mos/RT/blob/master/screens/water2.png" width="500"/>
 </p>
 
-Perlin texture can be applied to objects.
+A perlin texture can be applied to objects.
 
 <p align="center">
   <img src="https://github.com/wael-mos/RT/blob/master/screens/demo_perlin.png" width="640"/>
