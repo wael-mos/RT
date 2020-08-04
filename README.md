@@ -33,12 +33,21 @@ We can render different shapes (they are all available in the menu on the left e
   <img src="https://github.com/wael-mos/RT/blob/master/screens/objects.png" width="640"/>
 </p>
 
+We can also render more complex shapes with 4 possible intersection points.
 <p align="center">
   <b>Goursat</b>
 </p>
 
 <p align="center">
   <img src="https://github.com/wael-mos/RT/blob/master/screens/goursat.png" width="640"/>
+</p>
+
+<p align="center">
+  <b>Tore</b>
+</p>
+
+<p align="center">
+  <img src="https://github.com/wael-mos/RT/blob/master/screens/tore.png" width="640"/>
 </p>
 
 The lights can have any color and they will interact properly with the world and with each other.
@@ -56,4 +65,11 @@ Objects can have a transparency and a refraction index.
 <p align="center">
   <img src="https://github.com/wael-mos/RT/blob/master/screens/tube.png" width="500"/>
   <img src="https://github.com/wael-mos/RT/blob/master/screens/refract.png" width="500"/>
+</p>
+
+They can also have a reflection index.
+
+<p align="center">
+  <img src="https://github.com/wael-mos/RT/blob/master/screens/inf_sphere.png" width="500"/>
+  <img src="https://github.com/wael-mos/RT/blob/master/screens/infinity.png" width="500"/>
 </p>
