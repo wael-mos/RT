@@ -7,11 +7,20 @@ RayTracer project from 42.
 ```bash
 brew install gtk+3
 brew install adwaita-icon-theme
-git clone https://github.com/wael-mos/RT.git ~/RT
-cd ~/RT
+git clone https://github.com/wael-mos/RT.git ~/RT && cd ~/RT && make
+./RT [file]
+```
+If double precision isn't available on your device.
+
+```bash
+brew install gtk+3
+brew install adwaita-icon-theme
+git clone https://github.com/wael-mos/RT.git ~/RT && cd ~/RT
+git checkout without_double
 make
 ./RT [file]
 ```
+
 Files are in scenes folder.
 <br />
 ### Hotkeys
