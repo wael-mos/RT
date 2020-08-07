@@ -2,7 +2,7 @@
 
 RayTracer project from 42.
 <br />
-### Install
+### Install mac
 
 ```bash
 brew install gtk+3
@@ -11,6 +11,7 @@ git clone https://github.com/wael-mos/RT.git ~/RT && cd ~/RT && make
 ./RT [file]
 ```
 If double precision isn't available on your device.
+```bash error: "Double precision floating point not supported by OpenCL implementation." ```
 
 ```bash
 brew install gtk+3
