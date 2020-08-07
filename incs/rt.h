@@ -6,7 +6,7 @@
 /*   By: wael-mos <wael-mos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/28 10:54:10 by wael-mos          #+#    #+#             */
-/*   Updated: 2020/07/30 17:03:56 by achoquel         ###   ########.fr       */
+/*   Updated: 2020/08/07 12:06:42 by wael-mos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,6 @@
 # include <string.h>
 # include <libxml/encoding.h>
 # include <libxml/xmlwriter.h>
-
-#ifdef cl_khr_fp64
-#pragma OPENCL EXTENSION cl_khr_fp64 : enable
-#elif defined(cl_amd_fp64)
-#pragma OPENCL EXTENSION cl_amd_fp64 : enable
-#else
-#error "Double precision floating point not supported by OpenCL implementation."
-#endif
 
 # define CL_SILENCE_DEPRECATION
 # ifdef __APPLE__
